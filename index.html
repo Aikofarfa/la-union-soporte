@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="Diagnóstico guiado y soporte técnico para la comunidad educativa de I.E. La Unión.">
+  <title>La Unión · Mesa de ayuda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a class="brand" href="#inicio" aria-label="La Unión, inicio">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-name">la unión<span class="brand-sub">mesa de ayuda</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#diagnostico">Diagnóstico</a></li>
+      <li><a href="#guias">Guías rápidas</a></li>
+      <li><a href="#reportar">Soporte</a></li>
+    </ul>
+    <a class="nav-cta" href="#diagnostico">Resolver un problema <span aria-hidden="true">↗</span></a>
+  </nav>
+
+  <main id="contenido">
+    <header class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Tecnología · I.E. La Unión</p>
+        <h1>Que nada<br>detenga <em>la clase.</em></h1>
+        <p class="hero-lede">Un problema técnico no debería robarte la hora. Encuentra una solución guiada o cuéntale a soporte qué está pasando.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#diagnostico">Empezar diagnóstico <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#guias">Ver guías rápidas <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-stats" aria-label="Cobertura de la mesa de ayuda">
+          <div><strong>06</strong><span>categorías</span></div>
+          <span class="stat-rule" aria-hidden="true"></span>
+          <div><strong>18</strong><span>soluciones guiadas</span></div>
+          <span class="stat-rule" aria-hidden="true"></span>
+          <div><strong>7–16</strong><span>lun–vie · atención</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="./assets/aula-soporte.webp" alt="Una docente acompaña a una estudiante frente a un computador en el aula" width="1500" height="1000" fetchpriority="high">
+        <div class="visual-shade" aria-hidden="true"></div>
+        <div class="photo-caption"><span class="caption-dot" aria-hidden="true"></span> Acompañamiento que sigue en el aula</div>
+        <div class="diagnostic-note">
+          <span class="note-icon" aria-hidden="true">✳</span>
+          <div><span class="note-label">¿Por dónde empezamos?</span><strong>Cuéntanos qué dejó de funcionar.</strong></div>
+          <a href="#diagnostico" aria-label="Ir al diagnóstico guiado">↗</a>
+        </div>
+        <div class="hero-index" aria-hidden="true">01 / 03</div>
+      </div>
+      <div class="hero-bottomline"><span>Una guía clara, paso a paso.</span><span>Desliza para explorar <span aria-hidden="true">↓</span></span></div>
+    </header>
+
+    <section class="section intro-strip" aria-label="Categorías de soporte">
+      <p>Te ayudamos con</p>
+      <div class="category-list"><span>Computadores</span><i></i><span>Conectividad</span><i></i><span>Proyección</span><i></i><span>Impresión</span><i></i><span>Cuentas</span></div>
+    </section>
+
+    <section class="section diagnosis-section" id="diagnostico">
+      <div class="section-heading">
+        <div><p class="eyebrow section-kicker">01 <span>—</span> Diagnóstico</p><h2>Vamos a encontrar<br><em>el origen.</em></h2></div>
+        <p>Elige lo que más se parece a tu problema. Te guiaremos por comprobaciones seguras y sencillas.</p>
+      </div>
+      <div class="wizard-shell">
+        <div class="wizard-top">
+          <div><span class="wizard-label">Asistente de solución</span><span class="wizard-caption">Sin tecnicismos, sin adivinar.</span></div>
+          <div class="progress-wrap"><span class="step-num" id="stepNum">Paso 1</span><div class="progress-track" aria-hidden="true"><i id="barFill"></i></div></div>
+        </div>
+        <div class="wizard-body" id="wizardBody" aria-live="polite" aria-atomic="true"></div>
+        <div class="wizard-footer"><span>Si el problema continúa, el reporte llegará al equipo de soporte.</span><a href="#reportar">Prefiero reportarlo <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="section guides-section" id="guias">
+      <div class="section-heading guide-heading">
+        <div><p class="eyebrow section-kicker">02 <span>—</span> Guías rápidas</p><h2>Soluciones para<br><em>seguir avanzando.</em></h2></div>
+        <p>Una primera revisión puede resolver lo más común. Abre una guía y sigue los pasos con calma.</p>
+      </div>
+      <div class="guide-grid" id="guideCards" aria-label="Guías de solución frecuentes"></div>
+      <div class="guide-footnote"><span class="asterisk" aria-hidden="true">✳</span><p>Cuida los equipos: no abras computadores, proyectores ni gabinetes de red. Para fallas internas, registra el problema y avisa a soporte.</p></div>
+    </section>
+
+    <section class="support-section" id="reportar">
+      <div class="support-layout">
+        <div class="support-copy">
+          <p class="eyebrow section-kicker">03 <span>—</span> Soporte</p>
+          <h2>¿No se resolvió?<br><em>Lo vemos contigo.</em></h2>
+          <p>Cuéntanos dónde ocurre y qué probaste. Con esos detalles, el equipo puede llegar preparado.</p>
+          <div class="support-contact">
+            <span class="contact-symbol" aria-hidden="true">↗</span>
+            <div><span>Correo de soporte</span><a href="mailto:sebascastroj70@gmail.com">sebascastroj70@gmail.com</a></div>
+          </div>
+          <div class="support-hours"><span class="hours-mark" aria-hidden="true"></span><span>Atención presencial<br><strong>Lunes a viernes, 7:00–16:00</strong></span></div>
+        </div>
+        <div class="form-panel">
+          <div class="form-heading"><div><span class="form-step">REPORTE DE INCIDENCIA</span><h3>Cuéntanos qué pasó</h3></div><span class="form-required">* Obligatorio</span></div>
+          <div id="formNotice" class="notice" role="status" aria-live="polite"></div>
+          <form id="reportForm">
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-grid">
+              <div class="field"><label for="nombre">Nombre completo <span>*</span></label><input id="nombre" name="nombre" required minlength="3" placeholder="Nombre y apellido" autocomplete="name"></div>
+              <div class="field"><label for="rol">¿Cuál es tu rol? <span>*</span></label><select id="rol" name="rol" required><option>Estudiante</option><option>Docente</option><option>Administrativo</option><option>Otro</option></select></div>
+              <div class="field"><label for="ubicacion">Aula o dependencia <span>*</span></label><input id="ubicacion" name="aula" required minlength="2" placeholder="Ej. Aula 203, biblioteca"></div>
+              <div class="field"><label for="equipo">Equipo o servicio <span>*</span></label><select id="equipo" name="equipo" required><option>Computador de aula</option><option>Portátil</option><option>Proyector / TV</option><option>Impresora</option><option>Red / WiFi</option><option>Audio</option><option>Cuenta / plataforma</option><option>Otro</option></select></div>
+              <div class="field full"><label for="contacto">Correo para responderte <span class="optional">Opcional</span></label><input id="contacto" name="_replyto" type="email" placeholder="tunombre@correo.com" autocomplete="email"></div>
+              <fieldset class="field full urgency-field"><legend>¿Qué tan urgente es?</legend><div class="urgency" id="urgWrap"><button type="button" class="urg baja" data-v="baja" aria-pressed="false">Baja</button><button type="button" class="urg media on" data-v="media" aria-pressed="true">Media</button><button type="button" class="urg alta" data-v="alta" aria-pressed="false">Alta</button></div></fieldset>
+              <div class="field full"><label for="desc">¿Qué ocurre? <span>*</span></label><textarea id="desc" name="problema" required minlength="10" placeholder="Describe lo que ves, desde cuándo y a cuántos equipos les pasa."></textarea></div>
+              <div class="field full"><label for="intentado">¿Qué ya intentaste? <span class="optional">Opcional</span></label><textarea id="intentado" name="intentado" placeholder="Por ejemplo: reinicié, probé otro cable…"></textarea></div>
+            </div>
+            <div class="form-bottom"><p>Tu reporte se envía al correo de soporte para gestionar la incidencia.</p><button type="submit" class="button button-dark submit-button" id="submitBtn">Enviar reporte <span aria-hidden="true">→</span></button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-name">la unión<span class="brand-sub">mesa de ayuda</span></span></a>
+    <p>I.E. La Unión <span>·</span> Atlántico</p>
+    <p class="footer-credit">Proyecto formativo SENATIC <span>·</span> Equipo 4</p>
+    <a class="back-top" href="#inicio">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>
